@@ -26,6 +26,17 @@ users.set(demoId, {
   passwordHash: demoHash
 });
 
+// Seed sample Northqa user: test@northqa.com / dangwapokaayo
+const northqaId = 'user_northqa_102';
+const northqaHash = hashPassword('testonly');
+users.set(northqaId, {
+  id: northqaId,
+  email: 'test@qa.com',
+  name: 'Northqa',
+  createdAt: new Date().toISOString(),
+  passwordHash: northqaHash
+});
+
 export const UserStore = {
   findByEmail(email: string): StoredUser | undefined {
     const normalized = email.trim().toLowerCase();
