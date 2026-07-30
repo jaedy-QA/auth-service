@@ -2,6 +2,24 @@
 
 Authentication service for the Notes App.
 
+## How to run locally
+
+1. Install dependencies:
+
+```bash
+npm install
+```
+
+2. Start the service:
+
+```bash
+npm run dev
+```
+
+3. The service runs on port `3001` by default. If you want a different port, set `AUTH_PORT` before starting it.
+
+This service must be running before the notes API and frontend can authenticate users.
+
 ## What it provides
 
 - `POST /api/auth/register`
